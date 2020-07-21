@@ -4,15 +4,19 @@
 
 
 def valid_move?(board_arr, input_int)
-  if(Array.isArray())
-  if(position_taken?(board_arr, input_int))
-    
+  if board_arr.class == Array && input_int.class == Fixnum
+    if input_int > 0 && input_int < 10
+      position_taken?(board_arr, input_int - 1)
+    else
+      puts "Please type a number between 1 and 9!"
+    end
+  end
 end
 
 def position_taken?(board_arr, input_int)
   if(board_arr[input_int] == " " || board_arr[input_int] == "" || board_arr[input_int] == nil)
-    true
+    puts "Move registered! Next turn!"
   else
-    false
+    puts "That space is taken, try again!"
   end
 end
