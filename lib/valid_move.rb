@@ -4,7 +4,7 @@
 
 
 def valid_move?(board_arr, input_int)
-  if(!!board_arr)
+  if(Array.isArray())
   if(position_taken?(board_arr, input_int))
     
 end
